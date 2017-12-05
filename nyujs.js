@@ -40,6 +40,7 @@ if (typeof jQuery === 'undefined') {
 
 	var innerwidth = window.innerWidth;
 	var innerheight = window.innerHeight;
+	
 	// window load事件
 	$(window).on("load", function(e){
 		// 定位next和prev
@@ -59,10 +60,7 @@ if (typeof jQuery === 'undefined') {
 		allOperation();
 	});
 
-	// resize事件
-	$(window).on("resize", function(e){
-		changeListSize();
-	});
+
 
 	// mouseover事件
 	$(".nyu-carousel").on("mouseover", function(e){
@@ -92,6 +90,7 @@ if (typeof jQuery === 'undefined') {
 	}
 	
 	function changeListSize(){
+
 		var imgnum = $(".nyu-carousel-list > img").length;
 		$(".nyu-carousel-list img").css("width", $(".nyu-carousel").css("width"));
 		$(".nyu-carousel-list").css("width", parseInt($(".nyu-carousel").css("width")) * imgnum + "px");
@@ -143,6 +142,7 @@ if (typeof jQuery === 'undefined') {
 			var speed = offset / (time / interval);   // 每次位移量
 
 			function doAni(){
+
 				if ((speed < 0 && parseInt(list.css("left")) > newleft) || (speed > 0 && parseInt(list.css("left")) < newleft)) {
 					// 向左移动
 					list.css("left", parseInt(list.css("left")) + speed + "px");
@@ -195,5 +195,16 @@ if (typeof jQuery === 'undefined') {
 		$(".nyu-carousel").on("mouseover", stop);
 		$(".nyu-carousel").on("mouseout", play);
 		play();
+
+
+		// resize事件
+		$(window).on("resize", function(e){
+			value = parseInt($(".nyu-carousel").css("width"));
+			var templeft = Math.abs(parseInt($(".nyu-carousel-list").css("left")));
+			var tempwidth = parseInt($(".nyu-carousel-list img:first-child").css("width"));
+			var tempnum = Math.floor(templeft / tempwidth);
+			changeListSize();
+			$(".nyu-carousel-list").css("left", -(tempnum * parseInt($(".nyu-carousel").css("width"))) + "px");
+		});
 	}
 }(window.jQuery);
