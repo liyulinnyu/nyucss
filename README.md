@@ -52,6 +52,17 @@ NYU Cascading Style Sheets
 
 ![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-nav.png)
 
+## 分页样式
+目前共有两种分页样式，分别是类bootstrap和全色。每种样式都有小，正常，大三种size。
+
+① 第一种分页样式：
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-pagination-1.png)
+
+② 第二种分页样式：
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-pagination-2.png)
+
 ## 弹窗
 
 最简单的弹窗效果，用于用户提示等等。用百分比方式规定宽度，可以结合背景虚化或者暗背景使用
