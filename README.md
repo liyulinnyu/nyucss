@@ -39,6 +39,11 @@ NYU Cascading Style Sheets
 
 ![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-radiocheckbox.png)
 
+## 搜索框样式
+两种搜索框样式，浅色和深色，应用于不同背景，同时还有宽度拉长动画（见源码注释）
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-search.png)
+
 ## 轮播图样式
 
 更加方便美观地做出适配所有屏幕的轮播图效果，非等比例式适配浏览器伸缩。您只要设置三个值即可：
