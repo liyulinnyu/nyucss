@@ -19,6 +19,17 @@ NYU Cascading Style Sheets
 
 ![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-button-loading.png)
 
+## 输入框样式
+
+前置icon样式，分为小，正常，大三种：
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/pre-input.png)
+
+后置icon样式，分为小，正常，大三种：
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/next-input.png)
+
+
 ## 单选框，复选框样式
 
 用了nyucss中的青蓝色样式，更加美观易用。
