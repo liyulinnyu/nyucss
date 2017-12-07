@@ -91,6 +91,24 @@ NYU Cascading Style Sheets
 
 还有背景透视阴影效果等等。
 
+## 载入动画
+
+增加了几个等待载入动画效果， 具体结构可以看源码或者后续教程
+
+① 第一种载入动画有大，正常，小三种可以选择
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-loading-1.png)
+
+② 第二种动画运用box-shadow， 不宜放大使用，所以只有一种选择
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-loading-2.png)
+
+## 自动打字效果
+
+这种效果可以用js简单实现，但此处用了纯css，js只是做了计算字数的简单工作。效果更佳，渲染更快，唯一不足是目前仅支持中文打字效果。
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-typing.png)
+
 ## Versioning
 
 Version: 1.0
