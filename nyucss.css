@@ -159,11 +159,9 @@ pre code {
 input[type=text] {
   	-webkit-appearance:none;
   	outline:none;/*去除蓝色边框*/
-  	padding: 1em;
 }
 input[type=password]{
   	-webkit-appearance:none;
-  	padding: 1em;
   	outline:none;/*去除蓝色边框*/
 }
 html input[type="button"],
@@ -394,7 +392,144 @@ dd {
 * 常用颜色   (Y)
 */
 
+/*---------------------------------------------
+*    一些input样式
+    <div class="nyu-input-group">
+        <span class="nyu-input-preicon">@asd</span><input type="text" name="" class="nyu-input-next">
+    </div>
+----------------------------------------------*/
+.nyu-input-group {
+    margin-top: 10px;
+    display: inline-block;
+}
+.nyu-input-preicon-sm {
+    display: inline-block;
+    float:left;
+    background-color: #f5f5f5;
+    border:1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    text-align: center;
+    padding: 0 0.5rem;
+    height:3rem;
+    line-height: 3rem;
+    color: #8234aa;
+}
+.nyu-input-next-sm {
+    display: inline-block;
+    background-color: #fff;
+    border:1px solid #ccc;
+    border-left:0px solid transparent;
+    border-radius: 0 5px 5px 0;
+    padding: 0 0.5rem;
+    height:3rem;
+}
+.nyu-input-preicon {
+    display: inline-block;
+    float:left;
+    background-color: #f5f5f5;
+    border:1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    text-align: center;
+    padding: 0 1rem;
+    height:4rem;
+    line-height: 4rem;
+    color: #8234aa;
+}
+.nyu-input-next {
+    display: inline-block;
+    background-color: #fff;
+    border:1px solid #ccc;
+    border-left:0px solid transparent;
+    border-radius: 0 5px 5px 0;
+    padding: 0 1rem;
+    height:4rem;
+}
+.nyu-input-preicon-lg {
+    display: inline-block;
+    float:left;
+    background-color: #f5f5f5;
+    border:1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    text-align: center;
+    padding: 0 2rem;
+    height:5rem;
+    line-height: 5rem;
+    color: #8234aa;
+}
+.nyu-input-next-lg {
+    display: inline-block;
+    background-color: #fff;
+    border:1px solid #ccc;
+    border-left:0px solid transparent;
+    border-radius: 0 5px 5px 0;
+    padding: 0 2rem;
+    height:5rem;
+}
 
+/*icon在后的情况*/
+.nyu-input-pre-sm {
+    display: inline-block;
+    background-color: #fff;
+    border:1px solid #ccc;
+    border-right:0px solid transparent;
+    border-radius: 5px 0 0 5px;
+    padding: 0 0.5rem;
+    height:3rem;
+}
+.nyu-input-nexticon-sm {
+    display: inline-block;
+    float:right;
+    background-color: #f5f5f5;
+    border:1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+    padding: 0 0.5rem;
+    height:3rem;
+    line-height: 3rem;
+    color: #8234aa;
+}
+.nyu-input-nexticon {
+    display: inline-block;
+    float:right;
+    background-color: #f5f5f5;
+    border:1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+    padding: 0 1rem;
+    height:4rem;
+    line-height: 4rem;
+    color: #8234aa;
+}
+.nyu-input-pre {
+    display: inline-block;
+    background-color: #fff;
+    border:1px solid #ccc;
+    border-right:0px solid transparent;
+    border-radius: 5px 0 0 5px;
+    padding: 0 1rem;
+    height:4rem;
+}
+.nyu-input-nexticon-lg {
+    display: inline-block;
+    float:right;
+    background-color: #f5f5f5;
+    border:1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+    padding: 0 2rem;
+    height:5rem;
+    line-height: 5rem;
+    color: #8234aa;
+}
+.nyu-input-pre-lg {
+    display: inline-block;
+    background-color: #fff;
+    border:1px solid #ccc;
+    border-right:0px solid transparent;
+    border-radius: 5px 0 0 5px;
+    padding: 0 2rem;
+    height:5rem;
+}
 
 /*---------------------------------------------
 *    提交成功，失败效果
@@ -1122,6 +1257,7 @@ dd {
 *    radio和checkbox
 *    需要在radio后加一个i元素
 *    For example: <label><input type="checkbox" class="nyu-checkbox"><i></i>复选框</label><br>  
+     (必须要label包围)
 ---------------------------------------------*/
 .nyu-checkbox + i, .nyu-radio + i {
     display:inline-block;
@@ -1183,6 +1319,71 @@ dd {
     background-color: #ccc;
     position: absolute;
     margin-left: -8px;
+    margin-top:1px;
+    border-radius: 50%;
+}
+
+/*大的radio和checkbox*/
+.nyu-checkbox-lg + i, .nyu-radio-lg + i {
+    display:inline-block;
+    width:30px;
+    height:30px;
+    text-align:center;
+    color:#fff;
+    vertical-align:middle;
+    border:#00b8ac 1px solid;
+    margin-right: 5px;
+}  
+.nyu-checkbox-lg, .nyu-radio-lg {
+    display:none;
+}  
+.nyu-radio-lg + i {
+    border-radius:50%;
+}  
+.nyu-checkbox-lg:checked + i,.nyu-radio-lg:checked + i {
+    background:#fff;
+} 
+.nyu-checkbox-lg:checked + i:before {
+    content:"";
+    width:26px;
+    height:26px;
+    background-color: #00b8ac;
+    position: absolute;
+    margin-left: -13px;
+    margin-top:1px;
+} 
+.nyu-radio-lg:checked + i:before {
+    content:"";
+    width:26px;
+    height:26px;
+    background-color: #00b8ac;
+    position: absolute;
+    margin-left: -13px;
+    margin-top:1px;
+    border-radius: 50%;
+} 
+.nyu-checkbox-lg:disabled + i,.nyu-radio-lg:disabled + i {
+    border-color:#ccc;
+}  
+.nyu-checkbox-lg:checked:disabled + i,.nyu-radio-lg:checked:disabled + i {
+    background:#ccc;
+}  
+.nyu-checkbox-lg:checked:disabled + i:before {
+    content:"";
+    width:26px;
+    height:26px;
+    background-color: #ccc;
+    position: absolute;
+    margin-left: -13px;
+    margin-top:1px;
+} 
+.nyu-radio-lg:checked:disabled + i:before {
+    content:"";
+    width:26px;
+    height:26px;
+    background-color: #ccc;
+    position: absolute;
+    margin-left: -13px;
     margin-top:1px;
     border-radius: 50%;
 }
