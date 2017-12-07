@@ -47,6 +47,18 @@ NYU Cascading Style Sheets
 
 ![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-alert.png)
 
+## 提交成功弹窗
+
+当用户提交信息成功时，可以触发这个弹窗样式
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-alert-success.png)
+
+## 提交失败弹窗
+
+当用户提交信息失败时，可以触发这个弹窗样式
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-alert-fail.png)
+
 ## 图片处理
 加入了IE12+支持的图片处理效果，同时分类加入了hover的效果可用于图片的特效，例如：
 这是原始图片：
