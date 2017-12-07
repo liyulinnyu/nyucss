@@ -23,11 +23,11 @@ NYU Cascading Style Sheets
 
 前置icon样式，分为小，正常，大三种：
 
-![image](https://github.com/liyulinnyu/Myimg/blob/master/pre-input.png)
+![image](https://github.com/liyulinnyu/Myimg/blob/master/next-input.png)
 
 后置icon样式，分为小，正常，大三种：
 
-![image](https://github.com/liyulinnyu/Myimg/blob/master/next-input.png)
+![image](https://github.com/liyulinnyu/Myimg/blob/master/pre-input.png)
 
 
 ## 单选框，复选框样式
