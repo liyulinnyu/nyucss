@@ -208,3 +208,33 @@ if (typeof jQuery === 'undefined') {
 		});
 	}
 }(window.jQuery);
+
+
+//nav
++function($) {
+
+	$(".nyu-nav").find("li").each(function(index, elem){
+        $(elem).on("click", function(e){
+            $(".nyu-nav").find(".active").removeClass("active");
+            $(this).find("a").removeClass("disabled").addClass("active");
+ 
+            var getto = $(this).find("a").attr("data-href-to");
+            $(".nyu-nav-content").find(".active").removeClass("active").addClass("disabled");
+                    
+            $("." + getto).removeClass("disabled").addClass("active");
+        });
+    });
+
+}(window.jQuery);
+
+
+// 打字效果
++function($) {
+
+	$(".nyu-typing").each(function(index, elem){
+		//直接在nyu-typing中输入文字
+		var len = $(elem).html().length;
+		$(elem).css("width", len + "em").css("animation-timing-function", "steps("+len+"),steps(1)").css("animation-duration", len/2+"s,0.8s");
+	});
+
+}(window.jQuery);
