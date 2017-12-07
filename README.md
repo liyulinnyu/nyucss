@@ -47,7 +47,49 @@ NYU Cascading Style Sheets
 
 ![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-alert.png)
 
+## 图片处理
+加入了IE12+支持的图片处理效果，同时分类加入了hover的效果可用于图片的特效，例如：
+这是原始图片：
 
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-img.png)
+
+① 加入灰白效果
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-img-1.png)
+
+② 老照片效果
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-img-2.png)
+
+③ 增加饱和度
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-img-3.png)
+
+④ 色相反转
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-img-4.png)
+
+⑤ 胶卷底片效果
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-img-5.png)
+
+⑥ 背景变暗
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-img-6.png)
+
+⑦ 背景高亮
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-img-7.png)
+
+⑧ 对比度增强
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-img-8.png)
+
+⑨ 背景模糊（毛玻璃效果）
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-img-9.png)
+
+还有背景透视阴影效果等等。
 
 ## Versioning
 
