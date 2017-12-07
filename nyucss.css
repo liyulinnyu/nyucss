@@ -349,109 +349,6 @@ mark,
   padding: .2em;
   background-color: #fcf8e3;
 }
-.text-left {
-  text-align: left;
-}
-.text-right {
-  text-align: right;
-}
-.text-center {
-  text-align: center;
-}
-.text-justify {
-  text-align: justify;
-}
-.text-nowrap {
-  white-space: nowrap;
-}
-.text-lowercase {
-  text-transform: lowercase;
-}
-.text-uppercase {
-  text-transform: uppercase;
-}
-.text-capitalize {
-  text-transform: capitalize;
-}
-.text-muted {
-  color: #777;
-}
-.text-primary {
-  color: #337ab7;
-}
-a.text-primary:hover,
-a.text-primary:focus {
-  color: #286090;
-}
-.text-success {
-  color: #3c763d;
-}
-a.text-success:hover,
-a.text-success:focus {
-  color: #2b542c;
-}
-.text-info {
-  color: #31708f;
-}
-a.text-info:hover,
-a.text-info:focus {
-  color: #245269;
-}
-.text-warning {
-  color: #8a6d3b;
-}
-a.text-warning:hover,
-a.text-warning:focus {
-  color: #66512c;
-}
-.text-danger {
-  color: #a94442;
-}
-a.text-danger:hover,
-a.text-danger:focus {
-  color: #843534;
-}
-.bg-primary {
-  color: #fff;
-  background-color: #337ab7;
-}
-a.bg-primary:hover,
-a.bg-primary:focus {
-  background-color: #286090;
-}
-.bg-success {
-  background-color: #dff0d8;
-}
-a.bg-success:hover,
-a.bg-success:focus {
-  background-color: #c1e2b3;
-}
-.bg-info {
-  background-color: #d9edf7;
-}
-a.bg-info:hover,
-a.bg-info:focus {
-  background-color: #afd9ee;
-}
-.bg-warning {
-  background-color: #fcf8e3;
-}
-a.bg-warning:hover,
-a.bg-warning:focus {
-  background-color: #f7ecb5;
-}
-.bg-danger {
-  background-color: #f2dede;
-}
-a.bg-danger:hover,
-a.bg-danger:focus {
-  background-color: #e4b9b9;
-}
-.page-header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
-  border-bottom: 1px solid #eee;
-}
 ul,
 ol {
   margin-top: 0;
@@ -462,20 +359,6 @@ ol ul,
 ul ol,
 ol ol {
   margin-bottom: 0;
-}
-.list-unstyled {
-  padding-left: 0;
-  list-style: none;
-}
-.list-inline {
-  padding-left: 0;
-  margin-left: -5px;
-  list-style: none;
-}
-.list-inline > li {
-  display: inline-block;
-  padding-right: 5px;
-  padding-left: 5px;
 }
 dl {
   margin-top: 0;
@@ -496,27 +379,980 @@ dd {
 
 /*	(只有紫，灰，鹅黄，橘黄，墨绿，粉,facebook蓝)
 *	轮播图    (Y)
-*	tab切换
+*	tab切换    (Y)
 *	分页
-*	背景大图
-*	各种button样式，包括radio等
-*	点赞摇动
-*	底部栏
+*	各种button样式，包括radio等    (Y)
+*	点赞摇动，点赞等图标    (Y)
 *	登录动画或者切换大动画   (Y)
-*	点赞等图标
-*	栅格定位
-*	特效动画filter:blue;等等
+*	栅格定位    (Y)
+*	图片特效filter:blur;等等  (Y)
 *	canvas弹幕效果
-*	table样式
 *	导航条，包括dropdown效果（即导航的导航）
-*	alert弹窗
-*	隐藏显示，visible，display等细节的东西
+*	alert弹窗    (Y)
+* 载入等待动画，彩圈，炫彩nyu等    (Y)
+* 打字效果   (Y)
+* 常用颜色   (Y)
 */
 
 
 
+/*---------------------------------------------
+*    提交成功，失败效果
+*    Author: Yulin Li(12-7-2017)
+----------------------------------------------*/
+.nyu-alert-success {
+    position: fixed;
+    width:120px;
+    height:60px;
+    border:1px solid #00b8ac;
+    border-radius: 3px;
+    color:#fff;
+    background-color: #00b8ac;
+    text-align: center;
+    line-height: 60px;
+    left:calc(50% - 60px);
+    top: calc(50% - 30px);
+    font-size: 1.2em;
+    -webkit-animation: alertsuccessani 2.5s linear forwards;
+    animation: alertsuccessani 2.5s linear forwards;
+}
+@-webkit-keyframes alertsuccessani {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    20% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    45% {
+        transform: rotate(20deg);
+    }
+    47.5% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-20deg);
+    }
+    52.5% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
+@keyframes alertsuccessani {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    20% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    45% {
+        transform: rotate(20deg);
+    }
+    47.5% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-20deg);
+    }
+    52.5% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
 
-/*大屏半透明灰遮罩*/
+
+.nyu-alert-fail {
+    position: fixed;
+    width:120px;
+    height:60px;
+    border:1px solid #999;
+    border-radius: 3px;
+    color:#999;
+    background-color: #f5f5f5;
+    text-align: center;
+    line-height: 60px;
+    left:calc(50% - 60px);
+    top: calc(50% - 30px);
+    font-size: 1.2em;
+    -webkit-animation: alertfailani 5s linear forwards;
+    animation: alertfailani 5s linear forwards;
+}
+@-webkit-keyframes alertfailani {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        transform: rotate(0deg);
+        transform: scale(1);
+        opacity: 1;
+    }
+    40% {
+        transform: rotate(-360deg);
+    }
+    70% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
+@keyframes alertfailani {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        transform: rotate(0deg);
+        transform: scale(1);
+        opacity: 1;
+    }
+    40% {
+        transform: rotate(-360deg);
+    }
+    70% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
+
+/*--------------------------------------------
+*    打字效果
+*    目前只支持中文，下版本改进
+*    Author: Yulin Li(12-6-2017)
+----------------------------------------------*/
+.nyu-typing {
+    width: 3em;
+    animation: typing 3s steps(3),
+                caret 0.8s steps(1) infinite;
+    white-space: nowrap;
+    border-right: 0.05em solid;
+    overflow: hidden;
+}
+@keyframes typing {
+    from {
+        width:0;
+    }
+}
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+/*--------------------------------------------
+*    图标震动动画
+---------------------------------------------*/
+.nyu-iconAni {
+    -webkit-animation: iconani 0.5s ease-in-out;
+    animation: iconani 0.5s ease-in-out;
+}
+@-webkit-keyframes iconani {
+    0% {
+      -ms-transform:rotate(0deg);   /* IE 9 */
+      -moz-transform:rotate(0deg);  /* Firefox */
+      -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+      -o-transform:rotate(0deg);  /* Opera */
+      transform:rotate(0deg);
+
+    }
+    20% {
+      -ms-transform:scale(1.5) rotate(10deg);   /* IE 9 */
+      -moz-transform:scale(1.5) rotate(10deg);  /* Firefox */
+      -webkit-transform:scale(1.5) rotate(10deg); /* Safari 和 Chrome */
+      -o-transform:scale(1.5) rotate(10deg);  /* Opera */
+      transform:scale(1.5) rotate(10deg);
+    }
+    40% {
+      -ms-transform:scale(1.5) rotate(-10deg);  /* IE 9 */
+      -moz-transform:scale(1.5)rotate(-10deg);  /* Firefox */
+      -webkit-transform: scale(1.5)rotate(-10deg); /* Safari 和 Chrome */
+      -o-transform: scale(1.5) rotate(-10deg);  /* Opera */
+      transform:scale(1.5) rotate(-10deg);
+    }
+    60% {
+      -ms-transform:scale(1.5) rotate(10deg);   /* IE 9 */
+      -moz-transform:scale(1.5) rotate(10deg);  /* Firefox */
+      -webkit-transform:scale(1.5) rotate(10deg); /* Safari 和 Chrome */
+      -o-transform:scale(1.5) rotate(10deg);  /* Opera */
+      transform:scale(1.5) rotate(10deg);
+    }
+    80% {
+      -ms-transform:scale(1.5) rotate(-10deg);  /* IE 9 */
+      -moz-transform:scale(1.5) rotate(-10deg);   /* Firefox */
+      -webkit-transform:scale(1.5) rotate(-10deg); /* Safari 和 Chrome */
+      -o-transform:scale(1.5) rotate(-10deg);   /* Opera */
+      transform:scale(1.5) rotate(-10deg);
+    }
+    100% {
+      -ms-transform:rotate(0deg);   /* IE 9 */
+      -moz-transform:rotate(0deg);  /* Firefox */
+      -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+      -o-transform:rotate(0deg);  /* Opera */
+      transform:rotate(0deg);
+    }
+}
+@keyframes iconani {
+    0% {
+      -ms-transform:rotate(0deg);   /* IE 9 */
+      -moz-transform:rotate(0deg);  /* Firefox */
+      -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+      -o-transform:rotate(0deg);  /* Opera */
+      transform:rotate(0deg);
+
+    }
+    20% {
+      -ms-transform:scale(1.5) rotate(10deg);   /* IE 9 */
+      -moz-transform:scale(1.5) rotate(10deg);  /* Firefox */
+      -webkit-transform:scale(1.5) rotate(10deg); /* Safari 和 Chrome */
+      -o-transform:scale(1.5) rotate(10deg);  /* Opera */
+      transform:scale(1.5) rotate(10deg);
+    }
+    40% {
+      -ms-transform:scale(1.5) rotate(-10deg);  /* IE 9 */
+      -moz-transform:scale(1.5)rotate(-10deg);  /* Firefox */
+      -webkit-transform: scale(1.5)rotate(-10deg); /* Safari 和 Chrome */
+      -o-transform: scale(1.5) rotate(-10deg);  /* Opera */
+      transform:scale(1.5) rotate(-10deg);
+    }
+    60% {
+      -ms-transform:scale(1.5) rotate(10deg);   /* IE 9 */
+      -moz-transform:scale(1.5) rotate(10deg);  /* Firefox */
+      -webkit-transform:scale(1.5) rotate(10deg); /* Safari 和 Chrome */
+      -o-transform:scale(1.5) rotate(10deg);  /* Opera */
+      transform:scale(1.5) rotate(10deg);
+    }
+    80% {
+      -ms-transform:scale(1.5) rotate(-10deg);  /* IE 9 */
+      -moz-transform:scale(1.5) rotate(-10deg);   /* Firefox */
+      -webkit-transform:scale(1.5) rotate(-10deg); /* Safari 和 Chrome */
+      -o-transform:scale(1.5) rotate(-10deg);   /* Opera */
+      transform:scale(1.5) rotate(-10deg);
+    }
+    100% {
+      -ms-transform:rotate(0deg);   /* IE 9 */
+      -moz-transform:rotate(0deg);  /* Firefox */
+      -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+      -o-transform:rotate(0deg);  /* Opera */
+      transform:rotate(0deg);
+    }
+}
+
+/*--------------------------------------------
+*    加载动画
+*    需要设定位置
+*--------------------------------------------*/
+.nyu-loading-1 { 
+    position: absolute; 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    background: -webkit-linear-gradient(top,#fff,#00b8ac); 
+    -webkit-animation: loading1 1s infinite linear; 
+    animation: loading1 1s infinite linear; 
+}
+.nyu-loading-1:before {
+    position: absolute;
+    content:"";
+    width:50px;
+    height:50px;
+    background: #fff;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.nyu-loading-1-sm { 
+    position: absolute; 
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    background: -webkit-linear-gradient(top,#fff,#00b8ac); 
+    -webkit-animation: loading1 1s infinite linear; 
+    animation: loading1 1s infinite linear; 
+}
+.nyu-loading-1-sm:before {
+    position: absolute;
+    content:"";
+    width:25px;
+    height:25px;
+    background: #fff;
+    border-radius: 50%;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+.nyu-loading-1-lg { 
+    position: absolute; 
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    background: -webkit-linear-gradient(top,#fff,#00b8ac); 
+    -webkit-animation: loading1 1s infinite linear; 
+    animation: loading1 1s infinite linear; 
+}
+.nyu-loading-1-lg:before {
+    position: absolute;
+    content:"";
+    width:90px;
+    height:90px;
+    background: #fff;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+@-webkit-keyframes loading1 {
+    0%   { -webkit-transform: rotate(360deg); }
+    100% { -webkit-transform: rotate(0deg); }
+}
+@keyframes loading1 {
+    0%   { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.nyu-loading-2 {
+    margin-top: 100px;
+    margin-left: 300px;
+    width:1px;
+    height:1px;
+    box-shadow: 10px 0px 1px 1px #8234aa,
+                0px 10px 1px 1px #8234aa,
+                -10px 0px 1px 1.5px #8234aa,
+                0px -10px 1px 2.5px #8234aa,
+                7.5px 7.5px 1px 1px #8234aa,
+                7.5px -7.5px 1px 1px #8234aa,
+                -7.5px 7.5px 1px 1px #8234aa,
+                -7.5px -7.5px 1px 2px #8234aa;
+    -webkit-animation: loading2 1s infinite linear; 
+    animation: loading2 1s infinite linear; 
+}
+@-webkit-keyframes loading2 {
+    0%   { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes loading2 {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*--------------------------------------------
+*    其他细节
+----------------------------------------------*/
+.nyu-bd-radius-rect {
+    border-radius: 3px;
+}
+.nyu-bd-radius-circle {
+    border-radius: 50%;
+}
+
+
+/*--------------------------------------------
+*    button
+*    可以用下面的颜色，所以button一般不设置颜色，除了几个经典的样式
+*    加入禁止button和单色载入button
+*    Author: Yulin Li (12-6-2017)
+----------------------------------------------*/
+.nyu-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background-image: none;
+    border-radius: 4px;
+}
+.nyu-btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.nyu-btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.nyu-btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    cursor: pointer;
+}
+/*经典样式*/
+.nyu-btn-purple {
+    border:1px solid #8234aa;
+    background-color: #8234aa;
+    color:#fff;
+}
+.nyu-btn-purple-s {
+    background-color: #fff;
+    border:1px solid #8234aa;
+    color: #8234aa;
+}
+.nyu-btn-purple-d {
+    background-color: #fff;
+    border:1px solid #8234aa;
+    color: #8234aa;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.nyu-btn-purple-d:hover {
+    background-color: #8234aa;
+    color:#fff;
+}
+
+.nyu-btn-purple-dark {
+    border:1px solid #5f5997;
+    background-color: #5f5997;
+    color:#fff;
+}
+.nyu-btn-purple-dark-s {
+    background-color: #fff;
+    border:1px solid #5f5997;
+    color: #5f5997;
+}
+.nyu-btn-purple-dark-d {
+    background-color: #fff;
+    border:1px solid #5f5997;
+    color: #5f5997;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.nyu-btn-purple-dark-d:hover {
+    background-color: #5f5997;
+    color:#fff;
+}
+
+.nyu-btn-yellow {
+    border:1px solid #fff143;
+    background-color: #fff143;
+    color:#fff;
+}
+.nyu-btn-yellow-s {
+    background-color: #fff;
+    border:1px solid #fff143;
+    color: #fff143;
+}
+.nyu-btn-yellow-d {
+    background-color: #fff;
+    border:1px solid #fff143;
+    color: #fff143;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.nyu-btn-yellow-d:hover {
+    background-color: #fff143;
+    color:#fff;
+}
+
+.nyu-btn-orange {
+    border:1px solid #ff7500;
+    background-color: #ff7500;
+    color:#fff;
+}
+.nyu-btn-orange-s {
+    background-color: #fff;
+    border:1px solid #ff7500;
+    color: #ff7500;
+}
+.nyu-btn-orange-d {
+    background-color: #fff;
+    border:1px solid #ff7500;
+    color: #ff7500;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.nyu-btn-orange-d:hover {
+    background-color: #ff7500;
+    color:#fff;
+}
+
+.nyu-btn-pink {
+    border:1px solid #ed008c;
+    background-color: #ed008c;
+    color:#fff;
+}
+.nyu-btn-pink-s {
+    background-color: #fff;
+    border:1px solid #ed008c;
+    color: #ed008c;
+}
+.nyu-btn-pink-d {
+    background-color: #fff;
+    border:1px solid #ed008c;
+    color: #ed008c;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.nyu-btn-pink-d:hover {
+    background-color: #ed008c;
+    color:#fff;
+}
+
+.nyu-btn-blue {
+    border:1px solid #00b8ac;
+    background-color: #00b8ac;
+    color:#fff;
+}
+.nyu-btn-blue-s {
+    background-color: #fff;
+    border:1px solid #00b8ac;
+    color: #00b8ac;
+}
+.nyu-btn-blue-d {
+    background-color: #fff;
+    border:1px solid #00b8ac;
+    color: #00b8ac;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.nyu-btn-blue-d:hover {
+    background-color: #00b8ac;
+    color:#fff;
+}
+
+.nyu-btn-red {
+    border:1px solid #f74f4c;
+    background-color: #f74f4c;
+    color:#fff;
+}
+.nyu-btn-red-s {
+    background-color: #fff;
+    border:1px solid #f74f4c;
+    color: #f74f4c;
+}
+.nyu-btn-red-d {
+    background-color: #fff;
+    border:1px solid #f74f4c;
+    color: #f74f4c;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.nyu-btn-red-d:hover {
+    background-color: #f74f4c;
+    color:#fff;
+}
+
+.nyu-btn-gray {
+    border:1px solid #ccc;
+    background-color: #ccc;
+    color:#fff;
+}
+.nyu-btn-gray-s {
+    background-color: #fff;
+    border:1px solid #ccc;
+    color: #ccc;
+}
+.nyu-btn-gray-d {
+    background-color: #fff;
+    border:1px solid #ccc;
+    color: #ccc;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.nyu-btn-gray-d:hover {
+    background-color: #ccc;
+    color:#fff;
+}
+
+.nyu-btn-purple:hover, .nyu-btn-purple-dark:hover, .nyu-btn-yellow:hover, .nyu-btn-orange:hover, .nyu-btn-pink:hover, .nyu-btn-blue:hover, .nyu-btn-red:hover, .nyu-btn-gray:hover {
+    opacity: 0.9;
+    filter:alpha(opacity=90);
+}
+
+/*单色(只有紫色，想要其他可以仿造)加载button*/
+.nyu-btn-loading {
+    -webkit-animation: btnloading 2s linear infinite;
+    animation: btnloading 2s linear infinite;
+}
+@-webkit-keyframes btnloading {
+    0% {
+        color:#fff;
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 0%, #fff 0%, #fff 100%);
+    }
+    10% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 10%, #fff 10%, #fff 100%);
+    }
+    20% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 20%, #fff 20%, #fff 100%);
+    }
+    30% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 30%, #fff 30%, #fff 100%);
+    }
+    40% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 40%, #fff 40%, #fff 100%);
+    }
+    50% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 50%, #fff 50%, #fff 100%);
+    }
+    60% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 60%, #fff 60%, #fff 100%);
+    }
+    70% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 70%, #fff 70%, #fff 100%);
+    }
+    80% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 80%, #fff 80%, #fff 100%);
+    }
+    90% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 90%, #fff 90%, #fff 100%);
+    }
+    100% {
+        color:#fff;
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 100%, #fff 100%, #fff 100%);
+    }
+}
+@keyframes btnloading {
+    0% {
+        color:#fff;
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 0%, #fff 0%, #fff 100%);
+    }
+    10% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 10%, #fff 10%, #fff 100%);
+    }
+    20% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 20%, #fff 20%, #fff 100%);
+    }
+    30% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 30%, #fff 30%, #fff 100%);
+    }
+    40% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 40%, #fff 40%, #fff 100%);
+    }
+    50% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 50%, #fff 50%, #fff 100%);
+    }
+    60% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 60%, #fff 60%, #fff 100%);
+    }
+    70% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 70%, #fff 70%, #fff 100%);
+    }
+    80% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 80%, #fff 80%, #fff 100%);
+    }
+    90% {
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 90%, #fff 90%, #fff 100%);
+    }
+    100% {
+        color:#fff;
+        background: linear-gradient(90deg, #8234aa 0%, #8234aa 100%, #fff 100%, #fff 100%);
+    }
+}
+
+/*禁用button*/
+.nyu-btn-forbid {
+    background-color: #ccc;
+    color:#f5f5f5;
+    border:1px solid #ccc;
+    cursor: not-allowed;
+}
+.nyu-btn-forbid:hover {
+    cursor: not-allowed;
+}
+
+/*-------------------------------------------
+*    radio和checkbox
+*    需要在radio后加一个i元素
+*    For example: <label><input type="checkbox" class="nyu-checkbox"><i></i>复选框</label><br>  
+---------------------------------------------*/
+.nyu-checkbox + i, .nyu-radio + i {
+    display:inline-block;
+    width:20px;
+    height:20px;
+    text-align:center;
+    color:#fff;
+    vertical-align:middle;
+    border:#00b8ac 1px solid;
+    margin-right: 5px;
+}  
+.nyu-checkbox, .nyu-radio {
+    display:none;
+}  
+.nyu-radio + i {
+    border-radius:50%;
+}  
+.nyu-checkbox:checked + i,.nyu-radio:checked + i {
+    background:#fff;
+} 
+.nyu-checkbox:checked + i:before {
+    content:"";
+    width:16px;
+    height:16px;
+    background-color: #00b8ac;
+    position: absolute;
+    margin-left: -8px;
+    margin-top:1px;
+} 
+.nyu-radio:checked + i:before {
+    content:"";
+    width:16px;
+    height:16px;
+    background-color: #00b8ac;
+    position: absolute;
+    margin-left: -8px;
+    margin-top:1px;
+    border-radius: 50%;
+} 
+.nyu-checkbox:disabled + i,.nyu-radio:disabled + i {
+    border-color:#ccc;
+}  
+.nyu-checkbox:checked:disabled + i,.nyu-radio:checked:disabled + i {
+    background:#ccc;
+}  
+.nyu-checkbox:checked:disabled + i:before {
+    content:"";
+    width:16px;
+    height:16px;
+    background-color: #ccc;
+    position: absolute;
+    margin-left: -8px;
+    margin-top:1px;
+} 
+.nyu-radio:checked:disabled + i:before {
+    content:"";
+    width:16px;
+    height:16px;
+    background-color: #ccc;
+    position: absolute;
+    margin-left: -8px;
+    margin-top:1px;
+    border-radius: 50%;
+}
+
+
+/*--------------------------------------------
+*    nyu color用色
+*    分为背景，文字，边框
+*    最重要的几个颜色：
+*    紫，淡紫，鹅黄，橘，粉色，青蓝，偏橘红, 白
+----------------------------------------------*/
+.nyu-bg-purple {
+    background-color: #8234aa;
+}
+.nyu-bg-purple-dark {
+    background-color: #5f5997;
+}
+.nyu-bg-yellow {
+    background-color: #fff143;
+}
+.nyu-bg-orange {
+    background-color: #ff7500;
+}
+.nyu-bg-pink {
+    background-color: #ed008c;
+}
+.nyu-bg-blue {
+    background-color: #00b8ac;
+}
+.nyu-bg-red {
+    background-color: #f74f4c;
+}
+.nyu-bg-gray {
+    background-color: #ccc;
+}
+.nyu-bg-gray-light {
+    background-color: #f5f5f5;
+}
+.nyu-bg-white {
+    background-color: #fff;
+}
+
+.nyu-bd-purple {
+    border:1px solid #8234aa;
+}
+.nyu-bd-purple-dark {
+    border:1px solid #5f5997;
+}
+.nyu-bd-yellow {
+    border:1px solid #fff143;
+}
+.nyu-bd-orange {
+    border:1px solid #ff7500;
+}
+.nyu-bd-pink {
+    border:1px solid #ed008c;
+}
+.nyu-bd-blue {
+    border:1px solid #00b8ac;
+}
+.nyu-bd-red {
+    border:1px solid #f74f4c;
+}
+.nyu-bd-gray {
+    border:1px solid #ccc;
+}
+.nyu-bd-gray-light {
+    border:1px solid #f5f5f5;
+}
+
+.nyu-ft-purple {
+    color: #8234aa;
+}
+.nyu-ft-purple-dark {
+    color: #5f5997;
+}
+.nyu-ft-yellow {
+    color: #fff143;
+}
+.nyu-ft-orange {
+    color: #ff7500;
+}
+.nyu-ft-pink {
+    color: #ed008c;
+}
+.nyu-ft-blue {
+    color: #00b8ac;
+}
+.nyu-ft-red {
+    color: #f74f4c;
+}
+.nyu-ft-gray {
+    color: #ccc;
+}
+.nyu-ft-gray-light {
+    color: #f5f5f5;
+}
+.nyu-ft-white {
+    color: #fff;
+}
+
+/*--------------------------------------------
+*    alert等弹窗
+----------------------------------------------*/
+.nyu-popwindow {
+    position: absolute;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    min-height:50px;
+    left:30%;
+    width:40%;
+    padding: 10px 15px;
+}
+
+/*--------------------------------------------
+*    淡入淡出效果
+----------------------------------------------*/
+.nyu-fadein {
+    -webkit-animation: fadein 0.5s ease-in forwards;
+    animation: fadein 0.5s ease-in forwards;
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+        filter:alpha(opacity=0);
+    }
+    to {
+        opacity: 1;
+        filter:alpha(opacity=100);
+    }
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+        filter:alpha(opacity=0);
+    }
+    to {
+        opacity: 1;
+        filter:alpha(opacity=100);
+    }
+}
+.nyu-fadeout {
+    -webkit-animation: fadeout 0.5s ease-in forwards;
+    animation: fadeout 0.5s ease-in forwards;
+}
+@-webkit-keyframes fadeout {
+    from {
+        opacity: 1;
+        filter:alpha(opacity=100);
+    }
+    to {
+        opacity: 0;
+        filter:alpha(opacity=0);
+    }
+}
+@keyframes fadeout {
+    from {
+        opacity: 1;
+        filter:alpha(opacity=100);
+    }
+    to {
+        opacity: 0;
+        filter:alpha(opacity=0);
+    }
+}
+/*--------------------------------------------
+*    大屏半透明灰遮罩
+*    Author: Yulin Li(12-5-2017);
+----------------------------------------------*/
 .nyu-shade {
     position: absolute;
     left:0;
@@ -634,6 +1470,512 @@ dd {
 .nyu-carousel-indicators > .active {
     background-color: #fff;
 }
+
+
+
+
+
+/*----------------------------------------------------------------------
+*    单级nav效果，单级单级！
+*    需要通过规定nav父元素的宽来控制nav的宽，这里都设置width:100%;
+*    nav高度没设置，都靠padding和字体撑开，直接修改字体和padding即可改变nav高度
+*    设置了显示内容的min-height为100px，可以修改
+*    需要设置a标签的data-href-to属性为需要连接显示的div的class值
+*    Author: Yulin Li(12-6-2017)
+*    For example:
+*    // 需要先设置container的宽
+*     <div class="container">
+        <ul class="nyu-nav">
+            <li><a href="#" class="active" data-href-to="myCom">1</a></li>
+            <li><a href="#" class="disabled" data-href-to="mySup">2</a></li>
+            <li><a href="#" class="disabled" data-href-to="myHat">3</a></li>
+        </ul>
+        <div class="nyu-nav-content">
+            <div class="myCom active">
+                a
+            </div>
+            <div class="mySup disabled">
+                b
+            </div>
+            <div class="myHat disabled">
+                c
+            </div>
+        </div>
+    </div>
+*
+------------------------------------------------------------------------*/
+.nyu-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width:100%;
+}
+.nyu-nav:after {
+    content:'';
+    display:block;
+    height:0;
+    visibility:hidden;
+    clear:both;
+}
+.nyu-nav li {
+    position: relative;
+    float:left;
+    display: block;
+    list-style: none;
+    border:1px solid #ccc;
+    border-bottom: 0px solid transparent;
+    border-radius: 5px 5px 0 0;
+    margin-right: 1px;
+}
+.nyu-nav li > a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color:#111;
+    padding: 10px 15px;
+    border-radius: 5px 5px 0 0;
+    background-color: #f5f5f5;
+}
+
+.nyu-nav .active {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.nyu-nav-content {
+    width:100%;
+    border:1px solid #ccc;
+    margin-top: -1px;
+    padding: 10px 15px;
+}
+.nyu-nav-content > .active {
+    display: block;
+    min-height:100px;
+    -webkit-animation: navani 0.5s linear forwards;
+    animation: navani 0.5s linear forwards;
+}
+@-webkit-keyframes navani {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes navani {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.nyu-nav-content > .disabled {
+    display: none;
+}
+
+
+
+/*----------------------------------------------------------------------
+*    canvas弹幕效果,直接用在背景上或者video上
+*    这像一个插件ok? 需要你传入text等，不然显示什么啊，拜托。 怎么传？去看nyujs啊
+*    Author: Yulin Li(12-6-2017)
+------------------------------------------------------------------------*/
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------
+*    CSS3图片效果，IE12+,移动端良好，直接将class用于img，或者需要效果的背景div上
+*    Author: Yulin Li(12-6-2017)
+*-------------------------------------------------------------------------------------*/
+.nyu-grayscale {
+    /*黑白图片*/
+    -webkit-filter:grayscale(1);
+    filter:grayscale(1);
+}
+.nyu-sepia {
+    /*图片老照片效果*/
+    -webkit-filter:sepia(1);
+    filter:sepia(1);
+}
+.nyu-saturate {
+    /*2倍饱和度，不够建议自行改变*/
+    -webkit-filter:saturate(2);
+    filter:saturate(2);
+}
+.nyu-huerotate {
+    /*色相反转*/
+    -webkit-filter:hue-rotate(90deg);
+    filter:hue-rotate(90deg);
+}
+.nyu-invert {
+    /*胶卷底片效果*/
+    -webkit-filter:invert(1);
+    filter:invert(1);
+}
+.nyu-darkness {
+    /*背景变暗*/
+    -webkit-filter:brightness(0.5);
+    filter:brightness(0.5);
+}
+.nyu-brightness {
+    /*背景高亮*/
+    -webkit-filter:brightness(1.5);
+    filter:brightness(1.5);
+}
+.nyu-contrast {
+    /*增强对比度*/
+    -webkit-filter:contrast(2);
+    filter:contrast(2);
+}
+.nyu-blur {
+    /*背景模糊/毛玻璃效果*/
+    -webkit-filter:blur(2px);
+    filter:blur(2px);
+}
+.nyu-dropshadow {
+    /*阴影效果，请用于png图片*/
+    -webkit-filter:drop-shadow(5px 5px 5px #ccc);
+    filter:drop-shadow(5px 5px 5px #ccc);
+}
+/*hover 还原效果*/
+.nyu-grayscale-hover {
+    -webkit-filter:grayscale(1);
+    filter:grayscale(1);
+}
+.nyu-grayscale-hover:hover {
+    filter:none;
+}
+.nyu-sepia-hover {
+    -webkit-filter:sepia(1);
+    filter:sepia(1);
+}
+.nyu-sepia-hover:hover {
+    filter:none;
+}
+.nyu-saturate-hover {
+    -webkit-filter:saturate(2);
+    filter:saturate(2);
+}
+.nyu-saturate-hover:hover {
+    filter:none;
+}
+.nyu-huerotate-hover {
+    -webkit-filter:hue-rotate(90deg);
+    filter:hue-rotate(90deg);
+}
+.nyu-huerotate-hover:hover {
+    filter:none;
+}
+.nyu-invert-hover {
+    -webkit-filter:invert(1);
+    filter:invert(1);
+}
+.nyu-invert-hover:hover {
+    filter:none;
+}
+.nyu-darkness-hover {
+    -webkit-filter:brightness(0.5);
+    filter:brightness(0.5);
+}
+.nyu-darkness-hover:hover {
+    filter:none;
+}
+.nyu-brightness-hover {
+    -webkit-filter:brightness(1.5);
+    filter:brightness(1.5);
+}
+.nyu-brightness-hover:hover {
+    filter:none;
+}
+.nyu-contrast-hover {
+    -webkit-filter:contrast(2);
+    filter:contrast(2);
+}
+.nyu-contrast-hover:hover {
+    filter:none;
+}
+.nyu-blur-hover {
+    -webkit-filter:blur(2px);
+    filter:blur(2px);
+}
+.nyu-blur-hover:hover {
+    filter:none;
+}
+.nyu-grayscale-hover {
+    -webkit-filter:drop-shadow(5px 5px 5px #ccc);
+    filter:drop-shadow(5px 5px 5px #ccc);
+}
+.nyu-grayscale-hover:hover {
+    filter:none;
+}
+
+
+/*----------------------------------------------------------------------
+*    栅格化
+*    Author: Yulin Li(12-6-2017)
+------------------------------------------------------------------------*/
+.nyu-col-1, .nyu-col-2, .nyu-col-3, .nyu-col-4, .nyu-col-5, .nyu-col-6, .nyu-col-7, .nyu-col-8, .nyu-col-9, .nyu-col-10, .nyu-col-11, .nyu-col-12 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.nyu-col {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  max-width: 100%;
+}
+.nyu-col-12 {
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  max-width: 100%;
+}
+.nyu-col-11 {
+  -ms-flex: 0 0 91.666667%;
+      flex: 0 0 91.666667%;
+  max-width: 91.666667%;
+}
+.nyu-col-10 {
+  -ms-flex: 0 0 83.333333%;
+      flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+}
+.nyu-col-9 {
+  -ms-flex: 0 0 75%;
+      flex: 0 0 75%;
+  max-width: 75%;
+}
+.nyu-col-8 {
+  -ms-flex: 0 0 66.666667%;
+      flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+.nyu-col-7 {
+  -ms-flex: 0 0 58.333333%;
+      flex: 0 0 58.333333%;
+  max-width: 58.333333%;
+}
+.nyu-col-6 {
+  -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+  max-width: 50%;
+}
+.nyu-col-5 {
+  -ms-flex: 0 0 41.666667%;
+      flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+}
+.nyu-col-4 {
+  -ms-flex: 0 0 33.333333%;
+      flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+.nyu-col-3 {
+  -ms-flex: 0 0 25%;
+      flex: 0 0 25%;
+  max-width: 25%;
+}
+.nyu-col-2 {
+  -ms-flex: 0 0 16.666667%;
+      flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+}
+.nyu-col-1 {
+  -ms-flex: 0 0 8.333333%;
+      flex: 0 0 8.333333%;
+  max-width: 8.333333%;
+}
+.nyu-right-12 {
+  right: 100%;
+}
+.nyu-right-11 {
+  right: 91.66666667%;
+}
+.nyu-right-10 {
+  right: 83.33333333%;
+}
+.nyu-right-9 {
+  right: 75%;
+}
+.nyu-right-8 {
+  right: 66.66666667%;
+}
+.nyu-right-7 {
+  right: 58.33333333%;
+}
+.nyu-right-6 {
+  right: 50%;
+}
+.nyu-right-5 {
+  right: 41.66666667%;
+}
+.nyu-right-4 {
+  right: 33.33333333%;
+}
+.nyu-right-3 {
+  right: 25%;
+}
+.nyu-right-2 {
+  right: 16.66666667%;
+}
+.nyu-right-1 {
+  right: 8.33333333%;
+}
+.cnyu-right-0 {
+  right: auto;
+}
+.nyu-left-12 {
+  left: 100%;
+}
+.nyu-left-11 {
+  left: 91.66666667%;
+}
+.nyu-left-10 {
+  left: 83.33333333%;
+}
+.nyu-left-9 {
+  left: 75%;
+}
+.nyu-left-8 {
+  left: 66.66666667%;
+}
+.nyu-left-7 {
+  left: 58.33333333%;
+}
+.nyu-left-6 {
+  left: 50%;
+}
+.nyu-left-5 {
+  left: 41.66666667%;
+}
+.nyu-left-4 {
+  left: 33.33333333%;
+}
+.nyu-left-3 {
+  left: 25%;
+}
+.nyu-left-2 {
+  left: 16.66666667%;
+}
+.nyu-left-1 {
+  left: 8.33333333%;
+}
+.nyu-left-0 {
+  left: auto;
+}
+.nyu-offset-12 {
+  margin-left: 100%;
+}
+.nyu-offset-11 {
+  margin-left: 91.66666667%;
+}
+.nyu-offset-10 {
+  margin-left: 83.33333333%;
+}
+.nyu-offset-9 {
+  margin-left: 75%;
+}
+.nyu-offset-8 {
+  margin-left: 66.66666667%;
+}
+.nyu-offset-7 {
+  margin-left: 58.33333333%;
+}
+.nyu-offset-6 {
+  margin-left: 50%;
+}
+.nyu-offset-5 {
+  margin-left: 41.66666667%;
+}
+.nyu-offset-4 {
+  margin-left: 33.33333333%;
+}
+.nyu-offset-3 {
+  margin-left: 25%;
+}
+.nyu-offset-2 {
+  margin-left: 16.66666667%;
+}
+.nyu-offset-1 {
+  margin-left: 8.33333333%;
+}
+.nyu-offset-0 {
+  margin-left: 0;
+}
+
+.nyu-order-first {
+  -ms-flex-order: -1;
+      order: -1;
+}
+.nyu-order-1 {
+  -ms-flex-order: 1;
+      order: 1;
+}
+.nyu-order-2 {
+  -ms-flex-order: 2;
+      order: 2;
+}
+.nyu-order-3 {
+  -ms-flex-order: 3;
+      order: 3;
+}
+.nyu-order-4 {
+  -ms-flex-order: 4;
+      order: 4;
+}
+.nyu-order-5 {
+  -ms-flex-order: 5;
+      order: 5;
+}
+.nyu-order-6 {
+  -ms-flex-order: 6;
+      order: 6;
+}
+.nyu-order-7 {
+  -ms-flex-order: 7;
+      order: 7;
+}
+.nyu-order-8 {
+  -ms-flex-order: 8;
+      order: 8;
+}
+.nyu-order-9 {
+  -ms-flex-order: 9;
+      order: 9;
+}
+.nyu-order-10 {
+  -ms-flex-order: 10;
+      order: 10;
+}
+.nyu-order-11 {
+  -ms-flex-order: 11;
+      order: 11;
+}
+.nyu-order-12 {
+  -ms-flex-order: 12;
+      order: 12;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
