@@ -1,5 +1,8 @@
-﻿# nyucss
+﻿# NYUCSS
 NYU Cascading Style Sheets
+
+这是属于nyu的级联样式表，这里只是简单的样式介绍，更多的细节内容，之后会以在线文档教程的形式出现。
+
 
 ## 按钮样式
 1. 按钮大小分为：
