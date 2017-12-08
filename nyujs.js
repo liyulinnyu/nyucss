@@ -238,3 +238,24 @@ if (typeof jQuery === 'undefined') {
 	});
 
 }(window.jQuery);
+
+
+// 导航
++function($) {
+	var circle = "<i class='temp-circle'></i>";
+    $(".nyu-dropdown > a").append(circle);
+
+    $(".nyu-dropdown").on("mouseover", function(e){
+        $(this).find("i").css({
+            "background-color":"transparent",
+            "border":"2px solid #fff"
+        });
+        $(this).find(".nyu-dropmenu").show();
+    }).on("mouseout", function(e){
+        $(this).find("i").css({
+            "background-color":"#fff",
+            "border":"0px solid transparent"
+        });
+        $(this).find(".nyu-dropmenu").hide();
+    });
+}(window.jQuery);
