@@ -385,13 +385,85 @@ dd {
 *	栅格定位    (Y)
 *	图片特效filter:blur;等等  (Y)
 *	canvas弹幕效果
-*	导航条，包括dropdown效果（即导航的导航）
+*	导航条，包括dropdown效果（即导航的导航）  (Ys)
 *	alert弹窗    (Y)
 * 载入等待动画，彩圈，炫彩nyu等    (Y)
 * 打字效果   (Y)
 * 常用颜色   (Y)
 */
 
+
+/*------------------------------------------------
+*    横式导航栏，version1.0 还无移动端适配，支持到二级导航
+*    Author: Yulin Li(12-08-2017)
+---------------------------------------------------*/
+.nyu-navbar {
+    display: relative;
+}
+
+.nyu-navbar a {
+    display: inline-block;
+    text-decoration: none;
+}
+.nyu-navbar > ul > li > a{
+    color:#fff;
+    padding: 1em 1.5em;
+}
+.nyu-navbar ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.nyu-navbar > ul > li {
+    float:left;
+    border:1px solid #ccc;
+    background-color: #8234aa;
+}
+.nyu-navbar > ul > li:not(.nyu-navbar-title):hover {
+    opacity: 0.9;
+}
+.nyu-navbar > ul > li:not(:first-child) {
+    border-left: 0px solid transparent;
+}
+
+.nyu-navbar .nyu-navbar-title {
+    display: inline-block;
+    color:#fff;
+    background-color: #8234aa;
+    padding: 1em 1.5em;
+}
+
+.temp-circle {
+    float: right;
+    background-color: #fff;
+    border-radius: 50%;
+    width:1em;
+    height:1em;
+    margin-top: 0.2em;
+    margin-left:1em;
+}
+
+.nyu-dropmenu {
+    position: absolute;
+    border:1px solid #ccc;
+    display: none;
+}
+.nyu-dropmenu li {
+    padding: 0.2em 2em;
+    background-color: #8234aa;
+    border:0px solid transparent;
+}
+.nyu-dropmenu li:not(:first-child) {
+    border-top:1px solid #ccc;
+}
+.nyu-dropmenu li > a {
+    color:#fff;
+    padding: 0.2em 1em;
+}
+
+.nyu-dropmenu > li:not(.nyu-dropmenu-title):hover {
+    opacity: 0.8;
+}
 
 
 
