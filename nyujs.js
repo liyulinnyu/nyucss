@@ -242,10 +242,10 @@ if (typeof jQuery === 'undefined') {
 
 // 导航
 +function($) {
-	var circle = "<i class='temp-circle'></i>";
+	var circle = "<i class='temp-circle' data-open='0' ></i>";
     $(".nyu-dropdown > a").append(circle);
 
-    $(".nyu-dropdown").on("mouseover", function(e){
+    $(".nyu-navbar .nyu-dropdown").on("mouseover", function(e){
         $(this).find("i").css({
             "background-color":"transparent",
             "border":"2px solid #fff"
@@ -257,5 +257,37 @@ if (typeof jQuery === 'undefined') {
             "border":"0px solid transparent"
         });
         $(this).find(".nyu-dropmenu").hide();
+    });
+
+    $(".nyu-navbar-v .nyu-dropdown > a").on("click", function(e){
+    	//将其父元素下所有的栏都收起
+    	var that = e.target;
+    	$(this).parent().parent().children().each(function(index, elem){
+    		if (elem !== that.parentNode){
+    			$(elem).find("i").css({
+		    		"background-color":"currentColor",
+		            "border":"0px solid transparent"
+		    	});
+		    	$(elem).find(".nyu-dropmenu-v").hide();
+		    	$(elem).find("i").attr("data-open", "0");
+    		}
+			
+    	});
+    	// 自己回收
+    	var i = $(this).parent().find("i");
+    	if ($(i).attr("data-open") === "0") {
+    		$(this).parent().find("i").css({
+	            "background-color":"transparent",
+	            "border":"2px solid currentColor"
+	        }).attr("data-open", "1");
+	        $(this).parent().find(".nyu-dropmenu-v").show();
+    	} else {
+    		$(i).css({
+	    		"background-color":"currentColor",
+	            "border":"0px solid transparent"
+	    	}).attr("data-open", "0");
+	    	$(this).parent().find(".nyu-dropmenu-v").hide();
+    	}
+        e.preventDefault();
     });
 }(window.jQuery);
