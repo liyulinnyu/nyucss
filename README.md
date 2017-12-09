@@ -83,6 +83,23 @@ NYU Cascading Style Sheets
 
 ![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-navbar-full-2.png)
 
+
+## 竖式导航栏样式
+
+目前支持到二级导航，之后会逐步增加样式和移动端适配（移动端再考虑，一般和横式合并）
+
+导航栏初始化效果
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu_navbar_v_1.png)
+
+展开第一栏效果（竖式和横式不一样在于，竖式需要点击展开，而横式只需鼠标over即可）
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu_navbar_v_2.png)
+
+展开第二栏效果（每次只保证一栏展开，其余栏关闭）
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu_navbar_v_3.png)
+
 ## 弹窗
 
 最简单的弹窗效果，用于用户提示等等。用百分比方式规定宽度，可以结合背景虚化或者暗背景使用
