@@ -396,6 +396,30 @@ dd {
 /*------------------------------------------------
 *    横式导航栏，version1.0 还无移动端适配，支持到二级导航
 *    Author: Yulin Li(12-08-2017)
+
+    <nav class="nyu-navbar">
+
+        <ul>
+            <li class="nyu-navbar-title">导航栏</li>
+            <li class="nyu-dropdown"><a href="#" title="">人工智能</a>
+                <ul class="nyu-dropmenu">
+                    <li><a href="#" title="">111</a></li>
+                    <li><a href="#" title="">222</a></li>
+                    <li><a href="#" title="">333</a></li>
+                </ul>
+            </li>
+            <li><a href="#" title="">机器学习</a></li>
+            <li><a href="#" title="">可穿戴设备</a></li>
+            <li class="nyu-dropdown">
+                <a href="#" title="">前端框架</a>
+                <ul class="nyu-dropmenu">
+                    <li><a href="#" title="">二级菜单</a></li>
+                    <li><a href="#" title="">二级菜单</a></li>
+                    <li><a href="#" title="">只支持到二级菜单</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 ---------------------------------------------------*/
 .nyu-navbar {
     display: relative;
@@ -435,7 +459,7 @@ dd {
 
 .temp-circle {
     float: right;
-    background-color: #fff;
+    background-color: currentColor;
     border-radius: 50%;
     width:1em;
     height:1em;
@@ -465,6 +489,67 @@ dd {
     opacity: 0.8;
 }
 
+
+/*------------------------------------------------------
+*    竖式navbar
+*    Author: Yulin Li(2017/12/09)
+*    <div class="container">
+        <nav class="nyu-navbar-v">
+            <ul>
+                <li class="nyu-dropdown"><a href="" title="">人工智能</a></li>
+                <li class="nyu-dropdown"><a href="" title="">机器学习</a></li>
+                <li class="nyu-dropdown">
+                    <a href="" title="">深度学习</a>
+                    <ul class="nyu-dropmenu-v">
+                        <li><a href="#" title="">二级菜单</a></li>
+                        <li><a href="#" title="">二级菜单</a></li>
+                        <li><a href="#" title="">只支持到二级菜单</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+-------------------------------------------------------*/
+.nyu-navbar-v {
+    position: relative;
+}
+.nyu-navbar-v a {
+    display: block;
+    text-decoration: none;
+}
+.nyu-navbar-v ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+.nyu-navbar-v > ul > li {
+    background-color: #f5f5f5;
+    border:1px solid #eee;
+}
+.nyu-navbar-v > ul > li:not(:first-child) {
+    border-top:0px solid transparent;
+}
+.nyu-navbar-v > ul > li > a {
+    padding: 0.5em 1em;
+}
+
+.nyu-dropmenu-v {
+    display: none;
+}
+.nyu-dropmenu-v li {
+    padding: 0.2em 2em;
+    background-color: #f9f9f9;
+    border:0px solid transparent;
+    border-top:1px solid #eee;
+}
+.nyu-dropmenu-v li > a {
+    padding: 0.2em 1em;
+    font-size: 0.8em;
+}
+
+.nyu-dropmenu-v > li:not(.nyu-dropmenu-title):hover {
+    opacity: 0.8;
+}
 
 
 /*----------------------------------------------
