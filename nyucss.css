@@ -1,7 +1,7 @@
 /*!
  * NYUCSS v1.0
  * From 2017 
- * Authors Yulin Li
+ * Authors Yulin Li, Qiongxuan Tan
  */
 
 
@@ -392,6 +392,50 @@ dd {
 * 常用颜色   (Y)
 */
 
+
+/*--------------------------------------------------
+*    Logo加载动画
+*    Author: Yulin Li, Qiongxuan Tan (12/10/2017)
+    <div class="nyu-logoloading-container">
+        <div class="nyu-logoloading-2"></div>
+    </div>
+---------------------------------------------------*/
+.nyu-logoloading-container {
+    position: absolute;
+    top:50px;
+    left:20%;
+    width:0px;
+    height:200px;
+    overflow: hidden;
+    -webkit-animation: logoloading 5s forwards;
+    animation: logoloading 5s forwards;
+}
+@-webkit-keyframes logoloading {
+    from {
+        width:0px;
+    }
+    to {
+        width:582px;
+    }
+}
+@keyframes logoloading {
+    from {
+        width:0px;
+    }
+    to {
+        width:582px;
+    }
+}
+.nyu-logoloading-1 {
+    background-image: url(nyuimg/nyu_logo1.svg);
+    width:581px;
+    height:100%;
+}
+.nyu-logoloading-2 {
+    background-image: url(nyuimg/nyu_logo2.svg);
+    width:581px;
+    height:100%;
+}
 
 /*------------------------------------------------
 *    横式导航栏，version1.0 还无移动端适配，支持到二级导航
