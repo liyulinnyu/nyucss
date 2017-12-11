@@ -137,6 +137,16 @@ NYU Cascading Style Sheets
 
 ![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-loading-2.png)
 
+③ NYU专属加载动画（目前有单色，彩色两种）
+
+加载中效果：
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-logo1.png)
+
+加载完成效果：
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-logo2.png)
+
 ## 自动打字效果
 
 这种效果可以用js简单实现，但此处用了纯css，js只是做了计算字数的简单工作。效果更佳，渲染更快，唯一不足是目前仅支持中文打字效果。
@@ -150,12 +160,13 @@ Version: 1.0
 ## Authors
 
 * **Yulin Li** - *Initial work* - [Yulin's blog](https://liyulinnyu.github.io)
+* **Qiongxuan Tan**
 
-## Contact me
+## Contact us
 
-If you want to contact me, please email me: yl4832@nyu.edu
+If you want to contact us, please send email to: yl4832@nyu.edu
 
 ## Final words
 
-* If you have some advices, please contact me.
+* If you have some advices, please contact us.
 * Have a nice day!
