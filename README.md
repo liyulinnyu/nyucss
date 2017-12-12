@@ -100,6 +100,10 @@ NYU Cascading Style Sheets
 
 ![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu_navbar_v_3.png)
 
+## Table样式
+
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu_table.png)
+
 ## 弹窗
 
 最简单的弹窗效果，用于用户提示等等。用百分比方式规定宽度，可以结合背景虚化或者暗背景使用
