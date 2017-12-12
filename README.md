@@ -102,7 +102,7 @@ NYU Cascading Style Sheets
 
 ## Table样式
 
-![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu_table.png)
+![image](https://github.com/liyulinnyu/Myimg/blob/master/nyu-table.png)
 
 ## 弹窗
 
