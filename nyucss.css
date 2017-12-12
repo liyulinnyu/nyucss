@@ -1,7 +1,7 @@
 /*!
  * NYUCSS v1.0
  * From 2017 
- * Authors Yulin Li, Qiongxuan Tan
+ * Authors Yulin Li, Qiongxuan Tan, Qianxi Zhou
  */
 
 
@@ -2697,6 +2697,97 @@ dd {
 
 
 
+/*-------------------------
+/*Author: Qianxi Zhou (2017-12-12)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container" style="overflow-x: auto">
+    <h2>Contextual Classes</h2>
+    <p>Contextual classes can be used to color table rows or table cells. The classes that can be used are: .active, .success, .info, .warning, and .danger.</p>
+    <table class="nyu-table">
+        <thead>
+        <tr class="nyu-table-tr">
+        <th class="nyu-table-th">Firstname</th>
+        <th class="nyu-table-th">Lastname</th>
+        <th class="nyu-table-th">Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="nyu-table-tr">
+            <td class="nyu-table-td">Default</td>
+            <td class="nyu-table-td">Defaultson</td>
+            <td class="nyu-table-td">def@somemail.com</td>
+        </tr>
+        <tr class="nyu-table-tr">
+            <td class="nyu-table-td">Success</td>
+            <td class="nyu-table-td">Doe</td>
+            <td class="nyu-table-td">john@example.com</td>
+        </tr>
+        <tr class="nyu-table-tr">
+            <td class="nyu-table-td">Danger</td>
+            <td class="nyu-table-td">Moe</td>
+            <td class="nyu-table-td">mary@example.com</td>
+        </tr>
+        <tr class="nyu-table-tr">
+            <td class="nyu-table-td">Info</td>
+            <td class="nyu-table-td">Dooley</td>
+            <td class="nyu-table-td">july@example.com</td>
+        </tr>
+        <tr class="nyu-table-tr">
+            <td class="nyu-table-td">Warning</td>
+            <td class="nyu-table-td">Refs</td>
+            <td class="nyu-table-td">bo@example.com</td>
+        </tr>
+        <tr class="nyu-table-tr">
+            <td class="nyu-table-td">Active</td>
+            <td class="nyu-table-td">Activeson</td>
+            <td class="nyu-table-td">act@example.com</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
+-------------------------*/
+
+.nyu-table-th, .nyu-table-td {
+    border-bottom: 1px solid black;
+}
+
+.nyu-table {
+    border-collapse: collapse;
+}
+
+.nyu-table-tr {
+    width: 5em;
+    height: 1em;
+}
+
+.nyu-table-th {
+     background-color: rgba(130, 52, 170, 0.75);
+     color: white;
+ }
+
+.nyu-table-tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.nyu-table tbody>tr:hover {
+    background-color: rgba(130, 52, 170, 0.5);
+    color: white;
+}
 
 
 
