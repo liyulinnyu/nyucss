@@ -165,6 +165,7 @@ Version: 1.0
 
 * **Yulin Li** - *Initial work* - [Yulin's blog](https://liyulinnyu.github.io)
 * **Qiongxuan Tan**
+* **Qianxi Zhou**
 
 ## Contact us
 
